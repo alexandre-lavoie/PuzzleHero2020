@@ -1,0 +1,1 @@
+Yet another message... Decode the message and give the result under the format FLAG{message} Links: https://cdn.event.csgames.org/challenges/ageofph/three.mp3

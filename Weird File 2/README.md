@@ -1,0 +1,1 @@
+Another file?! Links: https://cdn.event.csgames.org/challenges/binary/bin2
