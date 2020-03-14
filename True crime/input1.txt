@@ -1,0 +1,16 @@
+Chargement de la base de données | Loading database...
+10 candidats potentiels | 10 potential candidates...
+Vous avez 20 tentatives pour identifier correctement le suspect rapporté
+You have 20 tries to correctly identify our suspect...
+                          | hair  | eyes  | height  | age range     
+--------------------------------------------------------------------
+Aaryan Carney             | grey  | brown | average | teen          
+Gary Hansen               | black | green | average | young child   
+Yasmina Garcia            | blue  | green | tall    | teen          
+Aleia Rios                | blue  | brown | average | teen          
+Dixie Mendoza             | grey  | brown | tall    | kid           
+Jenevieve Hudson          | blue  | green | average | teen          
+Rosalinda Frazier         | blond | blue  | tall    | kid           
+Noam Bennett              | grey  | blue  | average | teen          
+Liz Fischer               | black | black | small   | kid           
+Khalid Mcknight           | blue  | black | average | adult         

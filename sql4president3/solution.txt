@@ -1,0 +1,1 @@
+FLAG{SELECT * FROM turing_complete WHERE language='sql' AND implementation='sqlite3.30' UNION SELECT * FROM turing_complete WHERE language='forth'}

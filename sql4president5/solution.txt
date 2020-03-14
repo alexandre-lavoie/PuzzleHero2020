@@ -1,0 +1,1 @@
+FLAG{SELECT * FROM turing_complete WHERE language='sql' AND implementation='sqlite3.29' UNION SELECT * FROM turing_complete WHERE language='forth' AND implementation='gforth' ORDER BY id LIMIT 2}

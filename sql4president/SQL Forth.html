@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://167.99.191.188:8080/forth-fr.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>SQL Forth</title>
+        <style>
+            body {
+                margin: 10px 10%;
+                background-color: #FAFAFA;
+            }
+            #container {
+                max-width: 700px;
+                background-color: white;
+                padding: 15px;
+                margin: auto;
+            }
+            img {
+                max-width: 100%;
+            }
+            h2 {
+                border-top: 1px solid black;
+                margin-top: 50px;
+            }
+            blockquote {
+                border: 1px dotted black;
+                padding: 5px 25px;
+            }
+            blockquote blockquote {
+                border: none;
+                font-style: italic;
+            }
+            table {
+                margin: auto;
+                border-collapse: collapse;
+                border: 1px solid black;
+                width: 100%;
+            }
+            thead tr {
+                border: 1px solid black;
+            }
+            th {
+                padding: 5px;
+            }
+            tbody tr {
+                border: 1px solid black;
+            }
+            .pts td:first-child {
+                padding-left: 5px;
+                padding-right: 15px;
+                font-size: small;
+                color: gray;
+            }
+            th:nth-child(2), td:nth-child(2) {
+                text-align: center;
+            }
+            th, td {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            .question:before {
+                content: '---\A';
+                display: block;
+                text-align: center;
+                line-height: 60px;
+            }
+            .question {
+                font-size: 16px;
+            }
+            .question + pre:before,
+            .question + * + pre:before,
+            .question + * + * + pre:before {
+                content: "Exemple de résultat :\A";
+                text-decoration: underline;
+                white-space: pre;
+                margin-left: -10px;
+                line-height: 30px;
+            }
+            .question + pre,
+            .question + * + pre,
+            .question + * + * + pre {
+                font-size: large;
+                font-weight: bold;
+                margin: 10px 40px;
+                margin-bottom: 30px;
+                padding-left: 20px;
+                border-left: 1px solid black;
+            }
+            .question code {
+                font-size: smaller;
+                font-weight: bold;
+            }
+            blockquote code {
+                font-weight: bold;
+            }
+            .contrainte:before {
+                content: 'Contrainte:';
+            }
+            .contrainte {
+                margin-left: 20px;
+                padding: 5px 10px;
+                border: 2px dashed red;
+                font-style: italic;
+                display: inline-block;
+                background-color: #FFDDEE;
+            }
+            img.wheel {
+                float: left;
+                margin-bottom: 20px;
+            }
+            .note {
+                float: right;
+                color: gray;
+                margin-bottom: 50px;
+            }
+            .note::after {
+                content: ')';
+            }
+            .note::before {
+                margin-left: 10px;
+                content: '(';
+            }
+            .top-secret {
+                background: red;
+                font-size: xx-large;
+                text-align: center;
+                padding: 90px;
+                margin: 40px 0;
+                font-weight: bold;
+                font-family: sans;
+                color: black;
+                border: 3px solid pink;
+            }
+            .remise {
+                border: 1px dashed blue;
+                background-color: lightblue;
+                padding: 25px;
+            }
+            .download {
+                font-size: xx-large;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="top-secret">
+                <p>PROJET SECRET<br><br>ACCÈS AUTORISÉS SEULEMENT</p>
+            </div>
+            <blockquote>
+
+                <p>Une annonce récente du gouvernement vient changer
+                    nos plans :</p>
+
+                <blockquote>
+                    <p>Cher
+                        public,</p> <p>Tel que confirmé par notre Ministère de
+                        la Propagande, l'implantation de la série de mesures
+                        technocides récentes est un franc succès.</p>
+                    <p>Ensemble, nous avons fait un pas de plus vers la
+                        sécurité et l'épanouissement de notre société.</p>
+                    <p>Cependant, des lobbys publicitaires ayant à coeur
+                        votre bien-être nous ont fait remarquer dans les
+                        dernières semaines que toutes les technologies ne sont
+                        pas aussi dangeureuses les unes que les autres.</p>
+                    <p>Par exemple, certains langages inférieurs qui se
+                        restreignent uniquement à simplifier l'analyse de
+                        données personnelles peuvent avoir un impact bénéfique
+                        sur l'économie d'une société. La publicité ciblée est
+                        en effet l'un des piliers de notre économie
+                        moderne.</p> <p>C'est pourquoi nous croyons fermement
+                        que le SQL, un langage trop peu intéressant pour poser
+                        quelque danger que ce soit à la société, devrait
+                        rester autorisé, du moins jusqu'à ce que des méthodes
+                        moins technologiques de collecte de données
+                        personnelles soient déployées efficacement.</p>
+                </blockquote>
+
+                <p>La branche des analystes de données de la
+                    résistance n'est pas si sûre de cette dernière
+                    affirmation...</p> <p>Une équipe de la résistance a
+                    commencé à développer un prototype de langage de
+                    programmation complet entièrement écrit en
+                    <code>SQL</code>.</p> <p>Nous avons besoin de votre
+                        aide pour poursuivre le développement commencé...</p>
+                    
+            </blockquote>
+
+            <h3 id="code-existant">Code existant</h3>
+
+            <p>Notre code de base est <a href="http://167.99.191.188:8080/forth.sql">disponible ici</a>. Vous
+                pouvez le tester sur la <a href="http://167.99.191.188:8080/code.db">base de
+                données disponible ici</a> avec la dernière version de <code>sqlite3</code>.</p>
+
+            <p>Téléchargez une version récente de <code>sqlite3</code> au
+            besoin : <a href="https://sqlite.org/download.html" class="uri">https://sqlite.org/download.html</a></p>
+
+            <p>La base de données contient une seule table : <code>code</code>. Cette
+                table contient un seul champ qui contient du code
+                source à exécuter. L'exemple de code présent dans la
+                base de données devrait afficher <code>3</code> lorsqu'on
+                l'exécute avec le code fourni.</p>
+
+            <h2 id="langage-de-programmation">Langage de programmation</h2>
+
+            <p>L'équipe a choisi d'implanter un <code>Forth</code>, qui est un langage de programmation préfix pour une machine à pile.</p>
+            <p>Le langage est très simple :</p>
+
+            <ul>
+                <li>Les commandes sont séparées par des espaces</li>
+                <li>Un nombre littéral a pour effet d'ajouter le nombre sur la pile</li>
+                <li>N'importe quoi d'autre est une commande qui s'exécute sur la pile</li>
+            </ul>
+            <p>Par exemple :</p>
+            <pre class="forth"><code>1 2 +</code></pre>
+            <p>Va exécuter dans l'ordre :</p>
+            <ol style="list-style-type: lower-alpha">
+                <li>Empiler 1</li>
+                <li>Empiler 2</li>
+                <li>Exécuter la commande <code>"+"</code>, qui va retirer les deux nombres du dessus de la pile, les additionner, et ajouter la somme sur la pile</li>
+            </ol>
+
+            <p>Le dessus de la pile à la fin de l'exécution de ce
+            programme est <code>3</code>.</p>
+
+            <p>À moins d'utiliser des commandes d'affichage, la sortie
+                d'un programme correspond à la valeur sur le dessus de
+                la pile à la fin de son exécution.</p>
+            
+            <h2 id="tâche">Tâche</h2>
+            <p>La commande <code>"+"</code> a déjà été
+            implémentée. Vous devez ajouter les commandes suivantes :</p>
+
+            <table>
+                <thead>
+                    <tr class="header">
+                        <th align="left">Op</th>
+                        <th align="left">Effet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td align="left"><code>*</code> <br> <code>-</code></td>
+                        <td align="left">similaires au <code>+</code> mais pour la multiplication et la soustraction</td>
+                    </tr>
+                    <tr class="even">
+                        <td align="left"><code>/</code></td>
+                        <td align="left">dépile les deux valeurs sur
+                        le dessus de la pile et empile le résultat de
+                        la division <em>entière</em> des deux</td>
+                    </tr>
+                    <tr class="odd">
+                        <td align="left"><code>mod</code></td>
+                        <td align="left">qui dépile les deux valeurs sur le dessus de la pile et qui empile le résultat du modulo entre les deux</td>
+                    </tr>
+                    <tr class="even">
+                        <td align="left"><code>min</code> <br> <code>max</code></td>
+                        <td align="left">dépile les deux valeurs du dessus de la pile et empile respectivement le minimum ou le maximum entre ces deux valeurs</td>
+                    </tr>
+                    <tr class="odd">
+                        <td align="left"><code>dup</code></td>
+                        <td align="left">empile une copie de la valeur sur le dessus de la pile</td>
+                    </tr>
+                    <tr class="even">
+                        <td align="left"><code>swap</code></td>
+                        <td align="left">dépile les deux valeurs du dessus de la pile et les ré-empile dans l'ordre inverse</td>
+                    </tr>
+                    <tr class="odd">
+                        <td align="left"><code>depth</code></td>
+                        <td align="left">empile la valeur qui correspond à la taille actuelle de la pile</td>
+                    </tr>
+                    <tr class="even">
+                        <td align="left"><code>,</code></td>
+                        <td align="left">supprime la valeur du dessus de la pile (sans rien empiler)</td>
+                    </tr>
+                    <tr class="odd">
+                        <td align="left"><code>.</code></td>
+                        <td align="left">supprime la valeur du dessus de la pile et qui l'ajoute à l'output (suivi d'un espace)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Les programmes supportés doivent être écrits sur une
+                seule ligne (pas de saut de lignes autorisés).</p>
+
+            <p>Notez que dans cette implantation, un programme qui n'utilise
+                jamais la commande <code>.</code> aura par défault la valeur <em>du dessus</em>
+                de la pile en guise d'output, donc&nbsp;:</p>
+
+            <pre class="forth"><code>10 20 30</code></pre>
+            <p>Aura pour output <code>30</code>.</p>
+
+            <h2 id="exemples-de-programmes">Exemples de programmes</h2>
+            <p>Voici quelques exemples de programmes :</p>
+            <table>
+                <tbody><tr>
+                    <th>Programme</th>
+                    <th>Sortie</th>
+                </tr>
+                <tr><td><code>1 2 +                           </code></td><td><code><span style="color: gray">\</span> 3</code></td></tr>
+                <tr><td><code>10 20 + 5 -                     </code></td><td><code><span style="color: gray">\</span> 25</code></td></tr>
+                <tr><td><code>2 2 * 5 + 10 mod 5              </code></td><td><code><span style="color: gray">\</span> 5</code></td></tr>
+                <tr><td><code>10 dup * 10 dup * +             </code></td><td><code><span style="color: gray">\</span> 200</code></td></tr>
+                <tr><td><code>10 dup * 10 dup * + depth       </code></td><td><code><span style="color: gray">\</span> 1</code></td></tr>
+                <tr><td><code>5 8 swap -                      </code></td><td><code><span style="color: gray">\</span> 3</code></td></tr>
+                <tr><td><code>10 2 swap - abs                 </code></td><td><code><span style="color: gray">\</span> 8</code></td></tr>
+                <tr><td><code>50 300 max                      </code></td><td><code><span style="color: gray">\</span> 300</code></td></tr>
+                <tr><td><code>50 300 min                      </code></td><td><code><span style="color: gray">\</span> 50</code></td></tr>
+                <tr><td><code>-50 -300 max                    </code></td><td><code><span style="color: gray">\</span> -50</code></td></tr>
+                <tr><td><code>-50 -300 min                    </code></td><td><code><span style="color: gray">\</span> -300</code></td></tr>
+                <tr><td><code>1 2 3 , , .                     </code></td><td><code><span style="color: gray">\</span> 1</code></td></tr>
+                <tr><td><code>1 2 3 . . .                     </code></td><td><code><span style="color: gray">\</span> 3 2 1</code></td></tr>
+            </tbody></table>
+
+            <h2 id="exemples-de-programmes">Testez votre Forth</h2>
+            <p>Vous pouvez tester ces programmes vous-mêmes <a href="http://167.99.191.188:8080/forth.html">sur cette page web</a>.</p>
+        </div>
+    
+
+</body></html>
